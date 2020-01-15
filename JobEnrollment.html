@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="device=device-width; initial-scale=1.0">
+
+<style>
+   h2{
+        margin-left:20px;
+		margin-bottom: 10px;
+     }
+	 
+  textarea {
+              overflow-y: scroll;
+			  resize:none;
+			  margin-top:3px;
+           }
+		   
+	 select{
+	           margin-top:10px;
+			   height:23px;
+			   margin-left:2px
+	        }
+			
+	input[type=email] {
+	                      margin-top:10px;
+						  margin-bottom: 7px;
+						  height:15px;
+	 
+	                   }
+					   
+	input[type=text] {
+	                     margin-top:10px;    
+	                  }
+					  
+		 label.radio-inline1 {
+	                           margin-left:5px;
+	                         }
+		     
+			 label.questions{
+			                  margin-top:10px;
+							  margin-botton:10px;
+			                }
+							
+			
+	        
+		   		  
+			
+		
+</style>
+
+<script type="text/javascript">
+
+function displaymessage()
+{
+  alert("Information successfuly sent!");
+}
+
+</script>
+
+<title>Формуляр за кандидатстване за работа</title>
+
+</head>
+
+<body>
+
+<h2>Формуляр за кандидатстване за работа</h2>
+
+<form>
+
+<fieldset style="max-width:400px; background-color:PowderBlue; border-radius:40px">
+
+<!-- drop down menu for age -->
+
+<legend style="color:DarkRed; font-family:verdana; font-size:20px; font-weight:bold"> Лични данни: </legend>
+<label style="font-weight: bold">Име и фамилия:</label> <input type="text" name="firstname_lastname" size="75"> <label style="font-weight: bold">Възраст:</label> <input type="text" name="age" size="2"> <br>
+<label style="font-weight: bold">Месторождение:</label> <select name="country_of_origin">
+                              <option value="Aitos">България, Айтос</option>
+							  <option value="Burgas">България, Бургас</option>
+						      <option value="Varna">България, Варна</option>
+							  <option value="VelikoTarnovo">България, Велико Търново</option>
+							  <option value="Gabrovo">България, Габрово</option>
+				              </select>
+							  <br>
+<label style="font-weight: bold">Email:</label> <input type="email" name="emailaddress" size="25"> <br>
+<label style="font-weight: bold">Пол:</label> <label class="radio-inline1"><input type="radio" name="gender" value="female">Жена</label>
+					<label class="radio-inline2"><input type="radio" name="gender" value="male">Мъж</label>
+							  
+				
+
+</fieldset>
+
+<fieldset style="max-width:515px; background-color:PowderBlue; border-radius:40px">
+
+<legend style="color:DarkRed; font-famiy:verdana; font-size:22px; font-weight:bold"> Професионален опит </legend>
+
+<label class="questions" style=" font-weight:bold">1. Какви чужди езици владеете?</label> <br>
+
+&nbsp; &nbsp;<input type="checkbox" value="English"><label style="color:DarkGreen; font-weight:bold">Английски език</label> <br>
+&nbsp; &nbsp;<input type="checkbox" value="German"><label style="color:DarkGreen; font-weight:bold">Немски език</label> <br>
+&nbsp; &nbsp;<input type="checkbox" value="Russian"><label style="color:DarkGreen; font-weight:bold">Руски език</label> <br>
+&nbsp; &nbsp;<input type="checkbox" value="Other languages"><label style="color:DarkGreen; font-weight:bold">Други езици</label> <br>
+
+<label class="questions" style="font-weight:bold">2. С кои езици за web design имате опит?</label> <br>
+
+&nbsp; &nbsp;<input type="checkbox" value="HTML"><label style="color:DarkGreen; font-weight:bold">HTML</label> 
+<input type="checkbox" value="CSS"><label style="color:DarkGreen; font-weight:bold">CSS</label> 
+<input type="checkbox" value="JavaScript"><label style="color:DarkGreen; font-weight:bold">JavaScript</label> 
+<input type="checkbox" value="XML"><label style="color:DarkGreen; font-weight:bold">XML</label> 
+<input type="checkbox" value="PHP"><label style="color:DarkGreen; font-weight:bold">PHP</label> <br>
+&nbsp; &nbsp;<input type="checkbox" value="others"><label style="color:DarkGreen; font-weight:bold">и други</label> <br>
+
+<!-- rows= 20, cols = 20 for the textarea -->
+
+<label class="questions" style="font-weight: bold">3. Каква е вашата мотивация за работа?</label> <br>
+
+&nbsp; &nbsp; <textarea name="motivation" rows="20" cols="35" style="oferflow:scroll;">Длъжността "Web дизайнер" ....</textarea>
+
+
+</fieldset>
+
+<br>
+
+&nbsp; &nbsp; &nbsp; &nbsp;<input type="submit" value="Изпрати" style="border-radius:44px" value="Click me!" onclick="displaymessage()">
+&nbsp;<input type="reset" value="Изчисти" style="border-radius:44px">
+
+</form>
+
+<!-- input type checkbox, radio buttons 0,1, vsichki poveche, submit, reset, input type = text - size pole ime i familia, input type password
+fieldset, legend, select options -->
+
+</body>
+
+</html>
