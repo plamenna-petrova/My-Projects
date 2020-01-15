@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+
+
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="author" content="Plamenna Petrova">
+<meta name="description" content="A simple calculator, made with HTML5, CSS3 and Javacript">
+<meta name="keywords" content="HTML5, CSS3, JavaScript, calculator">
+<meta name="viewport" content="device=device-width; initial-scale=1.0">
+
+<script>
+
+     function insert(num)
+	 {
+	   document.form.textview.value = document.form.textview.value+num
+	 }
+	 
+	 function equal()
+	 {
+	   var exp = document.form.textview.value
+	   if(exp)
+	   {
+	     document.form.textview.value = eval(exp)
+	   }
+	 }
+	 
+	 function clean()
+	 {
+	   document.form.textview.value = ""
+	 }
+	 
+	 function back ()
+	 {
+	   var exp = document.form.textview.value
+	   document.form.textview.value = exp.substring(0,exp.length-1)
+	 }
+
+</script>
+
+<style>
+
+  .button {
+             width: 34px;
+			 height: 30px;
+			 font-size: 15px;
+			 cursor: pointer;
+			 background: #607d8b;
+			 border: none;
+			 border-collapse: collapse;
+          }
+		  
+	.button2 {
+	           height: 65px;
+			   width: 34px;
+			   font-size: 15px;
+			   cursor: pointer;
+			   background: #607d8b;
+			   border: none;
+               border-collapse: collapse;			   
+	         }
+			 
+	.button3 {
+	           width: 72px;
+			   height: 30px;
+			   font-size: 15px;
+			   cursor: pointer;
+			   background: #607d8b;
+			   border: none;
+               border-collapse: collapse;			   
+			   
+	         }
+		  
+	.textview {
+				height: 35px;
+				font-size:15px;
+				width: 139px;
+				padding: 5px;
+				border: none;
+				color: #607d8b;
+				background-color: powderblue;
+	          }
+	 .main {
+	         position: absolute;
+			 top: 12%;
+			 left: 36%;
+			 transform: translateX(-50%), translateY(-50%);
+	       }
+		   
+	  .table {
+	           border-collapse: collapse;
+	         }
+	
+
+</style>
+  
+<title>A simple JavaScript Calculator</title>
+
+<link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="background-color:azure">
+
+<div class="main">
+
+
+  
+   <table border="1px solid firebrick" cellspacing="0">
+   
+       <tr>
+	     <td colspan="4">
+		 <form name="form">
+	      <input class="textview" name="textview" size="15">
+          </form> 
+		 </td>
+	   </tr>
+   
+       <tr>
+	      <td><input class="button" type="button" value="C" onclick="clean()"></td>
+		  <td><input class="button" type="button" value="<" onclick="back()"></td>
+		  <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+		  <td><input class="button" type="button" value="X" onclick="insert('*')"></td>
+	   </tr>
+	   
+	   <tr>
+	      <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+		  <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+		  <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+		  <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
+	   </tr>
+	   
+	   <tr>
+	      <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+		  <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+		  <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+		  <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
+	   </tr>
+	   
+	   <tr>
+	      <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+		  <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+		  <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+		  <td rowspan="5"><input class="button2" type="button" value="=" onclick="equal()"></td>
+	   </tr>
+	   
+	   <tr>
+	     <td colspan="2"><input class="button3" type="button" value="0" onclick="insert(0)"></td>
+		 <td><input class="button" type="button" value="." onclick="insert('.')"></td>
+	   </tr>
+	   	    
+   </table>
+
+</div>
+
+</body>
+
+</html>
